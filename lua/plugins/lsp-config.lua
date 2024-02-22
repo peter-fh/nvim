@@ -1,34 +1,44 @@
 return {
 	{
 		"williamboman/mason.nvim",
+
 		config = function()
 			require("mason").setup({
 
-		ensure_installed = {
-		    "clangd",
-		    "clang-format"
-		}
-	    })
-		end
+				ensure_installed = {
+					"clangd",
+					"clang-format",
+				},
+			})
+		end,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = {"lua_ls"}
+				ensure_installed = { "lua_ls" },
 			})
-		end
+		end,
 	},
 	{
-		'neovim/nvim-lspconfig',
+		"neovim/nvim-lspconfig",
 		config = function()
-		    local lspconfig = require("lspconfig")
-		    lspconfig.lua_ls.setup({})
-		    lspconfig.clangd.setup({
-	    })
-		    lspconfig.pyright.setup({})
-		    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-		    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-		end
-	}
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local lspconfig = require("lspconfig")
+			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.clangd.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.sqlls.setup({
+				capabilities = capabilities,
+			})
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+		end,
+	},
 }
