@@ -5,7 +5,7 @@ return {
 
 	config = function()
 		require("monokai-pro").setup({
-			transparent_background = false,
+			transparent_background = true,
 			terminal_colors = true,
 			devicons = true, -- highlight the icons of `nvim-web-devicons`
 			styles = {
@@ -18,7 +18,7 @@ return {
 				annotation = { italic = true },
 				tag_attribute = { italic = true }, -- attribute of tag in reactjs
 			},
-			filter = "machine", -- classic | octagon | pro | machine | ristretto | spectrum
+			filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
 			-- Enable this will disable filter option
 			day_night = {
 				enable = false, -- turn off by default
