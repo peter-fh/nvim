@@ -16,7 +16,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls" },
+				ensure_installed = { "lua_ls", "html"},
 			})
 		end,
 	},
@@ -35,6 +35,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.sqlls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig["html"].setup({
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
