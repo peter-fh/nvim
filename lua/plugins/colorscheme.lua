@@ -2,7 +2,6 @@ return {
 	"loctvl842/monokai-pro.nvim",
 	name = "monokai",
 	priority = 1000,
-
 	config = function()
 		require("monokai-pro").setup({
 			transparent_background = true,
@@ -17,10 +16,10 @@ return {
 				parameter = { italic = true }, -- parameter pass in function
 				annotation = { italic = true },
 				tag_attribute = { italic = true }, -- attribute of tag in reactjs
-			},
-			filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
-			-- Enable this will disable filter option
-			day_night = {
+				},
+				filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
+				-- Enable this will disable filter option
+				day_night = {
 				enable = false, -- turn off by default
 				day_filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
 				night_filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
@@ -33,7 +32,7 @@ return {
 				-- "which-key",
 				"renamer",
 				"notify",
-				-- "nvim-tree",
+				"nvim-tree",
 				-- "neo-tree",
 				-- "bufferline", -- better used if background of `neo-tree` or `nvim-tree` is cleared
 			}, -- "float_win", "toggleterm", "telescope", "which-key", "renamer", "neo-tree", "nvim-tree", "bufferline"
@@ -54,6 +53,6 @@ return {
 			---@param Config MonokaiProOptions
 			---@param hp Helper
 		})
-		vim.cmd.colorscheme("monokai-pro")
+		--vim.cmd.colorscheme("monokai-pro")
 	end,
 }
