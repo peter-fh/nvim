@@ -49,7 +49,7 @@ return {
 			},
 		})
 
-		--vim.cmd.colorscheme("catppuccin")
+		vim.cmd.colorscheme("catppuccin")
 	end,
 
 	-- setup must be called before loading

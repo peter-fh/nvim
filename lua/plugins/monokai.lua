@@ -53,6 +53,6 @@ return {
 			---@param Config MonokaiProOptions
 			---@param hp Helper
 		})
-		vim.cmd.colorscheme("monokai-pro")
+		--vim.cmd.colorscheme("monokai-pro")
 	end,
 }

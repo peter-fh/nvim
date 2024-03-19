@@ -1,5 +1,5 @@
 return {
---[[ 	"jackMort/ChatGPT.nvim",
+	"jackMort/ChatGPT.nvim",
 	event = "VeryLazy",
 	config = function()
 		require("chatgpt").setup()
@@ -9,5 +9,5 @@ return {
 		"nvim-lua/plenary.nvim",
 		"folke/trouble.nvim",
 		"nvim-telescope/telescope.nvim",
-	}, ]]
+	},
 }
