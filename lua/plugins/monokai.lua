@@ -31,7 +31,6 @@ return {
 				"telescope",
 				-- "which-key",
 				"renamer",
-				"notify",
 				"nvim-tree",
 				-- "neo-tree",
 				-- "bufferline", -- better used if background of `neo-tree` or `nvim-tree` is cleared
@@ -53,6 +52,6 @@ return {
 			---@param Config MonokaiProOptions
 			---@param hp Helper
 		})
-		--vim.cmd.colorscheme("monokai-pro")
+		vim.cmd.colorscheme("monokai-pro")
 	end,
 }
