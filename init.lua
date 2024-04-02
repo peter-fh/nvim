@@ -11,9 +11,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
+local specs_folders = {
+  { import = "plugins.ai" },
+  { import = "plugins.core" },
+  { import = "plugins.file-navigation" },
+  { import = "plugins.fun" },
+  { import = "plugins.qol" },
+  { import = "plugins.ui" },
+  -- etc.
+}
 require("vim-options")
-require("lazy").setup("plugins")
-
-
+require("lazy").setup(specs_folders)
 

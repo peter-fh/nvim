@@ -8,6 +8,7 @@ return {
 				ensure_installed = {
 					"clangd",
 					"clang-format",
+					"als",
 				},
 			})
 		end,
@@ -16,7 +17,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "html", "java_language_server", "pyright", "tsserver", "sqlls"},
+				ensure_installed = { "lua_ls", "html", "pyright", "tsserver", "sqlls", "als"},
 			})
 		end,
 	},
@@ -41,9 +42,6 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig["html"].setup({
-				capabilities = capabilities,
-			})
-			lspconfig["java_language_server"].setup({
 				capabilities = capabilities,
 			})
 

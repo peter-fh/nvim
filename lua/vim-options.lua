@@ -1,7 +1,6 @@
 vim.opt.fillchars = {eob = " "}
 vim.g.mapleader = " "
-vim.cmd("set shiftwidth=4")
-vim.cmd("set relativenumber")
+vim.cmd("set shiftwidth=8")
 vim.wo.relativenumber = true
 vim.wo.number = true
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", {noremap = true, silent = true})
