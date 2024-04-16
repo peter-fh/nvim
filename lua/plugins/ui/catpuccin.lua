@@ -36,6 +36,7 @@ return {
 			color_overrides = {},
 			custom_highlights = {},
 			integrations = {
+                alpha = true,
 				cmp = true,
 				gitsigns = true,
 				nvimtree = true,

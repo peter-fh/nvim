@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local specs_folders = {
-  { import = "plugins.ai" },
+  --{ import = "plugins.ai" },
   { import = "plugins.core" },
   { import = "plugins.file-navigation" },
   { import = "plugins.fun" },
@@ -22,4 +22,8 @@ local specs_folders = {
 }
 require("vim-options")
 require("lazy").setup(specs_folders)
+
+--vim.opt.background = 'light'
+vim.cmd.colorscheme("catppuccin") --monokai-pro, catppuccin, sonokai, everforest
+
 
