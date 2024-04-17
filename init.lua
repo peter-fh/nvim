@@ -17,6 +17,7 @@ local specs_folders = {
   { import = "plugins.file-navigation" },
   { import = "plugins.fun" },
   { import = "plugins.qol" },
+{ import = "plugins.git" },
   { import = "plugins.ui" },
   -- etc.
 }
