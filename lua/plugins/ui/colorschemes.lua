@@ -1,5 +1,5 @@
 return {
-        {
+        --[[ {
                 'sainnhe/everforest',
                 config = function()
                         vim.g.everforest_background = 'soft'
@@ -15,5 +15,5 @@ return {
                         vim.g.sonokai_style = 'espresso'
                         vim.g.sonokai_better_performance = 1
                 end
-        }
+        } ]]
 }

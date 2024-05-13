@@ -27,5 +27,4 @@ require("lazy").setup(specs_folders)
 --vim.opt.background = 'light'
 --vim.cmd.colorscheme('everforest') --monokai-pro, catppuccin, sonokai, everforest
 
---vim.cmd.colorscheme('monokai-pro') --monokai-pro, catppuccin, sonokai, everforest
-vim.cmd.colorscheme('catppuccin') --monokai-pro, catppuccin, sonokai, everforest
+vim.cmd.colorscheme('monokai-pro') --monokai-pro, catppuccin, sonokai, everforest
