@@ -19,7 +19,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.scrolloff = 8
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "81"
 
 vim.keymap.set("n", "<C-l>", "<C-w>l", {noremap = true, silent = true})
 vim.keymap.set("n", "<C-j>", "<C-w>j", {noremap = true, silent = true})
@@ -44,3 +44,9 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
+vim.keymap.set(
+	"n",
+	"<leader>ee",
+	"oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
+)

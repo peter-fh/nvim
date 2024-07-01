@@ -9,6 +9,9 @@ return {
 					"clangd",
 					"clang-format",
 					"als",
+					"pyright",
+					"clojure_lsp",
+					"erlang-ls",
 				},
 			})
 		end,
@@ -17,7 +20,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "html", "pyright", "tsserver", "sqlls", "als"},
+				ensure_installed = { "erlangls", "clojure_lsp", "lua_ls", "html", "pyright", "tsserver", "sqlls", "als", "gopls"},
 			})
 		end,
 	},
@@ -44,6 +47,16 @@ return {
 			})
 			lspconfig["html"].setup({
 				capabilities = capabilities,
+			})
+
+			lspconfig["gopls"].setup({})
+
+			lspconfig["clojure_lsp"].setup({
+				capabilites = capabilities,
+			})
+
+			lspconfig.erlangls.setup({
+				capabilites = capabilities,
 			})
 
 			vim.keymap.set("n", "gd", require('telescope.builtin').lsp_definitions, {})
