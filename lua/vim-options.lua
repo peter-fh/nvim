@@ -4,13 +4,23 @@ vim.g.mapleader = " "
 
 vim.cmd("set shiftwidth=4")
 
-vim.api.nvim_exec([[
-    autocmd FileType javascript setlocal tabstop=4 shiftwidth=8 expandtab
-]], false)
 
-vim.api.nvim_exec([[
-    autocmd FileType lua setlocal tabstop=4 shiftwidth=8 expandtab
-]], false)
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+        desc = "Shiftwidth 8 on lua and js files",
+        pattern = {"*.js", "*.lua"},
+        callback = function ()
+                vim.cmd("setlocal tabstop=4 shiftwidth=8 expandtab")
+        end,
+})
+
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+        desc = "Open outline on entering code",
+        callback = function()
+                require('outline').open()
+                require('outline').focus_code()
+        end,
+})
+
 
 vim.wo.relativenumber = true
 vim.wo.number = true
@@ -46,7 +56,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set(
-	"n",
-	"<leader>ee",
-	"oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
+        "n",
+        "<leader>ee",
+        "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
